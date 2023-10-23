@@ -7,7 +7,7 @@
 
 
 <p align="center">Seja redirecionado à página do 
-<a href="" target="_blank">projeto</a></p>
+<a href="https://suellendiass.github.io/javascript-simulador-bateria/" target="_blank">projeto</a></p>
 
 
 
@@ -35,7 +35,7 @@ Segue uma  breve explicação de cada arquivo utilizado no projeto:
 
 - **index.html**: Este é o arquivo HTML principal que estrutura a página. Ele contém a estrutura do piano, incluindo o contêiner, as teclas do piano e os elementos de controle.
 
-- **reset.css**: Este arquivo contém estilos CSS de "reset" para redefinir valores padrão do navegador e criar uma base consistente para os estilos. No entanto, não há linhas de código específicas neste arquivo fornecidas na pergunta.
+- **reset.css**: Este arquivo contém estilos CSS de "reset" para redefinir valores padrão do navegador e criar uma base consistente para os estilos. 
 
 - **main.css**: Este arquivo contém estilos CSS que estilizam os elementos na página, como o contêiner, as teclas do piano e os controles. Ele também lida com estilos para criar efeitos visuais quando as teclas do piano são pressionadas.
 
