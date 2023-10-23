@@ -1,0 +1,10 @@
+/* Padronizando configurações no navegador */
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+   outline: none; /* elimina efeito tab */
+   /* estilo google fonts */
+   font-family: 'Poppins', sans-serif;
+  }

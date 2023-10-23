@@ -1,0 +1,162 @@
+/* estilizando a pagina */
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /*  min-height: 100vh; */
+    /* border:1px solid red; */
+    background-color:#f0ebd8;
+    color: #fff ; 
+    margin: 0; /* Remova a margem padrão para o corpo */
+    font-size: 16px; /* Use uma unidade de fonte relativa (em) */
+}
+/* Defina a altura do conteúdo como 100% da janela visual */
+html, body, .container {
+    height: 100%;
+  }
+
+.container{
+    /* width:780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    background-color: #1d2d44; */
+
+    
+    width: 90%; /* Use uma largura relativa em relação à tela */
+    height: 60%;
+    max-width: 780px; /* Defina um valor máximo para a largura */
+    margin: 0 auto; /* Centralize o container horizontalmente */
+    border-radius: 20px;
+    padding: 35px 5%; /* Use uma margem de 5% nas laterais */
+    background-color: #1d2d44;
+      
+}
+.container header{
+    color: #f0ebd8;
+    display: flex;/* um do lado do outro */
+    align-items: center;
+    justify-content: space-between;
+}
+header h2{
+    font-size: 1.6rem;
+}
+header .column{
+    display: flex;
+    align-items: center;
+}
+header .column span{
+    font-weight: 500;
+    margin-right:15px;
+    font-size:1.19rem;
+}
+
+.volume-slider input{
+    accent-color: #fff;
+}
+
+.keys-check input{
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background-color: #4b4b4b4b;
+    cursor: pointer;
+    position: relative;/*quando tiver uma div que vai sobrepor a outra , div pai tem o relative e div filho  absolute*/
+}
+/* pseudo elementos */
+.keys-check input::before{
+    content:'';
+    height: 20px;
+    width: 20px;
+    background-color: #8c8c8c;
+    top: 20%;
+    left: 1.3rem; /* controla posição input check */
+    border-radius: inherit;/* herda radius div pai */
+    position: absolute;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;   
+}
+/* estilizando  cheked desligado*/
+.keys-check
+input:checked::before{
+    left: 2.1rem;
+    background-color: #fff;
+}
+.piano-keys{
+    display: flex;
+    margin-top: 40px;
+}
+
+/*estilizando as teclas(letras) */
+.piano-keys .key{
+    cursor: pointer;
+    user-select: none; /* evita o efeito seleção */
+    list-style: none;
+    color: #f0ebd8;
+    position: relative;
+    text-transform: uppercase;
+}
+/* estilizando as teclas brancas */
+.piano-keys .white {
+    width: 70px;
+    height: 230px;
+    background: linear-gradient(#748cab 96%, #3e5c76 4%);
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+/* estilizando as teclas da cor preta */
+.piano-keys .black {
+    width: 44px;
+    height: 140px;
+    z-index: 2;/* cria outra dimensão */
+    margin: 0 -22px 0 -22px;
+    background: linear-gradient(#f0ebd8 , #1d2d44 );
+    border-radius: 0 o 5px 5px;
+    border: 1px solid black;
+}
+/* estilizando tag span */
+.piano-keys span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
+}
+/* criando efeito click */
+.piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom #fff 0%, #eee 100%);
+  }
+/* criando efeito click */
+.piano-keys .black.active {
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom #000, #434343);
+  }
+  /* ligando e desligando spam */
+.piano-keys .key.hide span {
+    display: none;
+  }
+
+  /* falta terminar a responsividade */
+  /* Media query para telas menores (orientação vertical) */
+@media (max-width: 768px) and (orientation: portrait) {
+    .piano-keys {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .piano-keys .key {
+      margin: 5px 0;
+    }
+
+    .piano-keys .white {
+        width: 70px;
+        height: 135px;
+    }
+    .piano-keys .black {
+        width: 34px;
+        height: 100px;
+  }
+}
